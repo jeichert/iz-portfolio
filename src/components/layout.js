@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import { StaticQuery, graphql } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 
-import Logo from "../assets/iz-logo.svg"
+import Logo from "../assets/iz-logo.svg";
 import "../styles/index.sass";
 
 const TemplateWrapper = ({ children }) => {
@@ -50,10 +50,13 @@ const TemplateWrapper = ({ children }) => {
           />
           <div className="container__sidebar">
             <div className="sidebar">
-              <h6 className="sidebar__title">
-                {/* <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link> */}
-                <Link to="/"><Logo /></Link>
-              </h6>
+              <Link to="/">
+                <Logo />
+              </Link>
+              <h4 className="sidebar__title">
+                <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
+              </h4>
+              <h4 className="sidebar__subtitle">Video Producer / Director</h4>
               <div
                 className="sidebar__intro"
                 dangerouslySetInnerHTML={{
